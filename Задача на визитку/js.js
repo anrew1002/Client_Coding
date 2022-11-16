@@ -80,7 +80,14 @@ handle = function (e) {
 
     } else {
         adress.style.display = "block";
+
     }
+    color_FIO = form.color_FIO.value
+
+    card.querySelector('.FIO').style.color = color_FIO
+    color_job = form.color_job.value
+
+    card.querySelector('.job').style.color = color_job
 
 };
 phone_adder = function (e) {

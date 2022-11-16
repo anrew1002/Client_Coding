@@ -187,3 +187,62 @@ input[type=text] {
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
 }
+
+.color input {
+    appearance: none;
+    background-color: initial;
+    border-radius: 50%;
+    border: 2px solid red;
+    width: 20px;
+    height: 20px;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+    color: fieldtext;
+    position: relative;
+    top: 4px;
+}
+
+.color input:checked {
+    border: 6px solid red;
+}
+
+
+input.black {
+    border: 2px solid black;
+}
+
+input.black:checked {
+    border: 6px solid black;
+}
+
+input.blue {
+    border: 2px solid blue;
+}
+
+input.blue:checked {
+    border: 6px solid blue;
+}
+
+input.green {
+    border: 2px solid green;
+}
+
+input.green:checked {
+    border: 6px solid green;
+}
+
+input.orange {
+    border: 2px solid orange;
+}
+
+input.orange:checked {
+    border: 6px solid orange;
+}
+
+input.pink {
+    border: 2px solid pink;
+}
+
+input.pink:checked {
+    border: 6px solid pink;
+}
