@@ -73,7 +73,7 @@ phone_adder = function (e) {
     };
     label = e.parentNode
     div = label.parentNode
-    console.log(div.children.length);
+
     inp = document.createElement("input");
     inp.name = 'phone2'
     but = document.createElement("button")

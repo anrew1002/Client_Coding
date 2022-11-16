@@ -20,74 +20,81 @@
 
                 <div class="text_on_input">Фамилия,имя, отчество
                 </div>
-                <input type="text" name="FIO" value="Горохов Андрей Евгеньевич">
-                <div class="chose_align_FIO">
-                    <label class="container">One
-                        <input name="align_FIO" type="radio">
-                        <span class="checkmark"></span>
-                    </label>
+                <div class="input_F">
+                    <input type="text" name="FIO" value="Горохов Андрей Евгеньевич">
+                    <div class="flex chose_align_FIO">
+                        <label class="container">
+                            <input name="align_FIO" type="radio" id="align_FIO_1">
+                            <label for="align_FIO_1">left</label>
+                        </label>
 
-                    <label class="container">Two
-                        <input name="align_FIO" type="radio" checked="checked">
-                        <span class="checkmark"></span>
-                    </label>
+                        <label class="container">
+                            <input name="align_FIO" type="radio" id="align_FIO_2" checked="checked">
+                            <label for="align_FIO_2">center</label>
+                        </label>
 
-                    <label class="container">Three
-                        <input name="align_FIO" type="radio">
-                        <span class="checkmark"></span>
-                    </label>
+                        <label class="container">
+                            <input name="align_FIO" type="radio" id="align_FIO_3">
+                            <label for="align_FIO_3">right</label>
+                        </label>
+
+                    </div>
+
+                    <div class="flex chose_size_FIO">
+                        <label class="container mark_24px">
+                            <input name="size_FIO" type="radio" id="size_FIO_1">
+                            <label for="size_FIO_1">24px</label>
+                        </label>
+
+                        <label class="container mark_26px">
+                            <input name="size_FIO" type="radio" id="size_FIO_2" checked="checked">
+                            <label for="size_FIO_2">26px</label>
+                        </label>
+
+                        <label class="container mark_28px">
+                            <input name="size_FIO" type="radio" id="size_FIO_3">
+                            <label for="size_FIO_3">28px</label>
+                        </label>
+                    </div>
                 </div>
-                <div class="chose_size_FIO">
-                    <label class="container">24px
-                        <input name="size_FIO" type="radio">
-                        <span class="checkmark"></span>
-                    </label>
 
-                    <label class="container">26px
-                        <input name="size_FIO" type="radio" checked="checked">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="container">28px
-                        <input name="size_FIO" type="radio">
-                        <span class="checkmark"></span>
-                    </label>
+                <div class="text_on_input">Должность
                 </div>
+                <div class="input_F">
+                    <input type="text" name="job" value="Detective">
 
-                <div class="text_on_input">Дролжность
-                </div>
-                <input type="text" name="job" value="Detective">
-                <div class="chose_align_job">
-                    <label class="container">One
-                        <input name="align_job" type="radio">
-                        <span class="checkmark"></span>
-                    </label>
+                    <div class="flex chose_align_job">
+                        <label class="container">
+                            <input name="align_job" type="radio" id="align_job_1">
+                            <label for="align_job_1">left</label>
+                        </label>
 
-                    <label class="container">Two
-                        <input name="align_job" type="radio" checked="checked">
-                        <span class="checkmark"></span>
-                    </label>
+                        <label class="container">
+                            <input name="align_job" type="radio" id="align_job_2" checked="checked">
+                            <label for="align_job_2">center</label>
+                        </label>
 
-                    <label class="container">Three
-                        <input name="align_job" type="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <div class="chose_size_job">
-                    <label class="container">14px
-                        <input name="size_job" type="radio">
-                        <span class="checkmark"></span>
-                    </label>
+                        <label class="container">
+                            <input name="align_job" type="radio" id="align_job_3">
+                            <label for="align_job_3">right</label>
+                        </label>
+                    </div>
+                    <div class="flex chose_size_job">
+                        <label class="container">
+                            <input name="size_job" type="radio" id="size_job-1">
+                            <label for="size_job-1">14px</label>
+                        </label>
 
-                    <label class="container">16px
-                        <input name="size_job" type="radio" checked="checked">
-                        <span class="checkmark"></span>
-                    </label>
+                        <label class="container">
+                            <input name="size_job" type="radio" id="size_job-2" checked="checked">
+                            <label for="size_job-2">16px</label>
+                        </label>
 
-                    <label class="container">18px
-                        <input name="size_job" type="radio">
-                        <span class="checkmark"></span>
-                    </label>
+                        <label class="container">
+                            <input name="size_job" type="radio" id="size_job-3">
+                            <label for="size_job-3">18px</label>
+                        </label>
+                    </div>
                 </div>
                 <div class="text_on_input">Телефон
                 </div>
@@ -105,7 +112,7 @@
                 </div>
                 <input type="text" name="place" value="Saint Hell">
                 <br>
-                <button type="button" onclick="handle(this)">Применить</button>
+                <button type="button" onclick="handle(this)" class="button">Применить</button>
             </form>
         </div>
 

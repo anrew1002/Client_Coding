@@ -1,6 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(140, 159, 167);
+    font-size: 18px;
 }
 
 div {
@@ -10,7 +11,7 @@ div {
 
 .main {
     background-color: rgb(251, 253, 255);
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0px auto;
     padding: 10px;
     border-radius: 5px;
@@ -32,6 +33,7 @@ button {
 
 .main_form {
     margin: 20px;
+    max-width: 700px;
 }
 
 .main_card {
@@ -69,4 +71,63 @@ span.job {
     font-size: 18px;
     color: rgb(65, 65, 65);
 
+}
+
+.input_F {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input {
+    margin: 8px 8px 8px 0px;
+}
+
+input[type=text] {
+    padding: 3px;
+}
+
+.add_phone {
+    margin-bottom: 10px;
+}
+
+.button {
+    padding: 10px 15px;
+    font-weight: 600;
+}
+
+.label {
+    font-size: 14px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: block;
+    margin-right: 10px;
+}
+
+.container input[type=radio] {
+    display: none;
+}
+
+.container label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 10px;
+    /* line-height: 34px; */
+    border: 1px solid #999;
+    border-radius: 6px;
+    user-select: none;
+}
+
+.container input[type=radio]:checked+label {
+    background: #b4b4b4;
+}
+
+/* Hover */
+.form_radio_btn label:hover {
+    color: #666;
 }
