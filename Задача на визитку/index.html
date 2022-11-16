@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Visitca</title>
+    <link href="css.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main_form">
+            <form name="v_form">
+                <h1>Конструктор визиток</h1>
+                <div class="text_on_input">Наименование организации:
+                </div>
+                <input type="text" name="organization" value="OOO Armada">
+                <div class="text_on_input">Фамилия,имя, отчество
+                </div>
+                <input type="text" name="FIO" value="Горохов Андрей Евгеньевич">
+                <div class="text_on_input">Дролжность
+                </div>
+                <input type="text" name="job" value="Detective">
+                <div class="text_on_input">Телефон
+                </div>
+                <input type="text" name="phone" value="+8950067234">
+                <div class="text_on_input">E-Mail
+                </div>
+                <input type="text" name="mail" value="andrew@gmail.com">
+                <div class="text_on_input">Адрес
+                </div>
+                <input type="text" name="place" value="Saint Hell">
+                <br>
+                <button type="button" onclick="handle(this)">Применить</button>
+            </form>
+        </div>
+
+        <div class="main_card">
+            <span class="organization"></span>
+            <div class="center_block">
+                <span class="FIO"></span>
+                <span class="job"></span>
+            </div>
+            <div class="right_align">
+                <span class="phone"></span>
+                <span class="mail"></span>
+                <span class="place"></span>
+            </div>
+        </div>
+
+        <script src="js.js"></script>
+    </div>
+</body>
+
+</html>
