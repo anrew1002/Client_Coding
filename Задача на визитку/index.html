@@ -17,15 +17,87 @@
                 <div class="text_on_input">Наименование организации:
                 </div>
                 <input type="text" name="organization" value="OOO Armada">
+
                 <div class="text_on_input">Фамилия,имя, отчество
                 </div>
                 <input type="text" name="FIO" value="Горохов Андрей Евгеньевич">
+                <div class="chose_align_FIO">
+                    <label class="container">One
+                        <input name="align_FIO" type="radio">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">Two
+                        <input name="align_FIO" type="radio" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">Three
+                        <input name="align_FIO" type="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="chose_size_FIO">
+                    <label class="container">24px
+                        <input name="size_FIO" type="radio">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">26px
+                        <input name="size_FIO" type="radio" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">28px
+                        <input name="size_FIO" type="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
                 <div class="text_on_input">Дролжность
                 </div>
                 <input type="text" name="job" value="Detective">
+                <div class="chose_align_job">
+                    <label class="container">One
+                        <input name="align_job" type="radio">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">Two
+                        <input name="align_job" type="radio" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">Three
+                        <input name="align_job" type="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="chose_size_job">
+                    <label class="container">14px
+                        <input name="size_job" type="radio">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">16px
+                        <input name="size_job" type="radio" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">18px
+                        <input name="size_job" type="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
                 <div class="text_on_input">Телефон
                 </div>
                 <input type="text" name="phone" value="+8950067234">
+                <div class="add_phone">
+                    <label>
+                        <button type="button" onclick="phone_adder(this)">+</button>
+                        Добавить еще один телефон
+                    </label>
+                </div>
                 <div class="text_on_input">E-Mail
                 </div>
                 <input type="text" name="mail" value="andrew@gmail.com">
@@ -39,12 +111,14 @@
 
         <div class="main_card">
             <span class="organization"></span>
-            <div class="center_block">
-                <span class="FIO"></span>
-                <span class="job"></span>
-            </div>
+
+            <span class="FIO"></span>
+
+
+            <span class="job"></span>
             <div class="right_align">
                 <span class="phone"></span>
+                <span class="phone2"></span>
                 <span class="mail"></span>
                 <span class="place"></span>
             </div>
