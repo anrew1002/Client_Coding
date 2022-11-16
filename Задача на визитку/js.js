@@ -63,6 +63,24 @@ handle = function (e) {
     font_sizing(job_size, job, ['14px', "16px", "18px"])
     FIO_size = document.getElementsByName("size_FIO");
     font_sizing(FIO_size, FIO, ['24px', "26px", "28px"])
+    mail_btt = document.getElementsByClassName("mail_display")[0]
+    mail = card.querySelector('.mail')
+    if (!mail_btt.checked) {
+        console.log(mail_btt.checked);
+        mail.style.display = "none";
+
+    } else {
+        mail.style.display = "block";
+    }
+    adress_btt = document.getElementsByClassName("adress_display")[0]
+    adress = card.querySelector('.place')
+    if (!adress_btt.checked) {
+        console.log(adress_btt.checked);
+        adress.style.display = "none";
+
+    } else {
+        adress.style.display = "block";
+    }
 
 };
 phone_adder = function (e) {

@@ -107,10 +107,22 @@
                 </div>
                 <div class="text_on_input">E-Mail
                 </div>
-                <input type="text" name="mail" value="andrew@gmail.com">
+                <div class="flex">
+                    <input type="text" name="mail" value="andrew@gmail.com">
+                    <label class="container_btt">Oтображать
+                        <input type="checkbox" checked="checked" class="mail_display">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
                 <div class="text_on_input">Адрес
                 </div>
-                <input type="text" name="place" value="Saint Hell">
+                <div class="flex">
+                    <input type="text" name="place" value="Saint Hell">
+                    <label class="container_btt">Oтображать
+                        <input type="checkbox" checked="checked" class="adress_display">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
                 <br>
                 <button type="button" onclick="handle(this)" class="button">Применить</button>
             </form>
