@@ -4,13 +4,15 @@
     let form = document.querySelector(".card");
     let save_btn = form.querySelector(".card__button-save");
 
-    let saveTask = e => {
-        let task = document.querySelector(".task");
+    let saveTask = (task) => (e) => {
+        e.preventDefault()
         let discription = task.querySelector(".task__discription");
+        let important = task.querySelector(".task__important");
         let form = document.querySelector(".card");
         console.log("Oler");
         discription.textContent = form.discription.value;
-        // important.textContent = form.important.checked ? "💢" : "";
+        important.textContent = form.important.checked ? "💢" : "";
+        form.reset()
     }
 
     list_tasks.addEventListener('click', function (e) {
@@ -27,11 +29,12 @@
             } else {
                 form.important.checked = false;
             };
-            console.log("prepare");
-            save_btn.onclick = saveTask;
+            form.onsubmit = saveTask(task);
+        };
+        if (target.classList.contains("task__button-del")) {
+            task.remove()
         };
 
     });
-
 
 })();
