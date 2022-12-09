@@ -16,7 +16,6 @@
     }
 
     list_tasks.addEventListener('click', function (e) {
-        e.preventDefault();
         let target = e.target;
         let task = e.target.closest(".task");
         let important = task.querySelector(".task__important");
