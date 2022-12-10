@@ -27,6 +27,10 @@ input[type="checkbox"] {
     height: 17px;
 }
 
+.notshown {
+    display: none;
+}
+
 .main-container {
     width: 60%;
     height: 2000px;
