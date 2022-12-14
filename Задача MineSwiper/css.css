@@ -1,0 +1,40 @@
+.mw {
+    display: grid;
+    grid-template-columns: repeat(var(--columns-count), 44px);
+    grid-gap: 6px;
+}
+
+.mw-cell {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: solid 1px #707070;
+    background: #BBBBBB;
+    cursor: pointer;
+}
+
+.mw-cell--open {
+    background: white;
+    cursor: default;
+}
+
+.mw-cell--mark {
+    background: white;
+}
+
+.mw-cell--mark:before {
+    content: "📌";
+
+}
+
+mw-cell--bomb {
+    background: #c42828;
+}
+
+mw-cell--bomb:before {
+    content: "💣";
+
+}
