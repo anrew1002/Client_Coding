@@ -1,3 +1,7 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .mw {
     display: grid;
     grid-template-columns: repeat(var(--columns-count), 44px);
@@ -6,7 +10,6 @@
 
 .mw-cell {
     display: flex;
-    align-content: center;
     align-items: center;
     justify-content: center;
     width: 44px;
@@ -30,11 +33,11 @@
 
 }
 
-mw-cell--bomb {
+.mw-cell--bomb {
     background: #c42828;
 }
 
-mw-cell--bomb:before {
+.mw-cell--bomb:before {
     content: "💣";
 
 }
