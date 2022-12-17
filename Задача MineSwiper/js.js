@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', e => {
     const mw = document.querySelector('.mw');
     const width = 12;
     const height = 12;
-    const bombCount = 2;
+    const bombCount = 5;
     let bombMap = [];
     let bombNum = [];
     let bombCell = [];
@@ -86,7 +86,6 @@ document.addEventListener('DOMContentLoaded', e => {
     }
     bombCell[0][0].focus()
     let openCell = (cell, check) => {
-        console.log(cell.x, cell.y)
         if (cell.classList.contains('mw-cell--open')) {
             return;
         }
