@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', e => {
         const t = e.target
         x = t.x
         y = t.y
-        bombCell[y][x].classList.add("mw-cell--mark")
+        bombCell[y][x].classList.toggle("mw-cell--mark")
     }
     mw.addEventListener('mousedown', e => {
         t = e.target
