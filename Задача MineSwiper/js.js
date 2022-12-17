@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', e => {
 
     const mw = document.querySelector('.mw');
-    const width = 5;
-    const height = 5;
+    const width = 12;
+    const height = 12;
     const bombCount = 2;
     let bombMap = [];
     let bombNum = [];
