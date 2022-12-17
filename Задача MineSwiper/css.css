@@ -6,6 +6,7 @@ body {
     display: grid;
     grid-template-columns: repeat(var(--columns-count), 44px);
     grid-gap: 6px;
+    width: fit-content;
 }
 
 .mw-cell {

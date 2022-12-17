@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', e => {
 
     }
 
-    createBombs();
 
     mw.style.setProperty('--columns-count', width);
     for (let y = 0; y < width; y++) {
@@ -80,10 +79,12 @@ document.addEventListener('DOMContentLoaded', e => {
             mwCell.y = y;
             // mwCell.classList.add('mw-cell--bomb')
             bombCell[y][x] = mwCell
+
             mw.append(mwCell);
 
         }
     }
+    bombCell[0][0].focus()
     let openCell = (cell, check) => {
         console.log(cell.x, cell.y)
         if (cell.classList.contains('mw-cell--open')) {
@@ -129,34 +130,84 @@ document.addEventListener('DOMContentLoaded', e => {
     let gameStarted = false;
 
 
-    cellInteract = (e) => {
+    let cellInteract = (e) => {
         const t = e.target;
         if (t.classList.contains('mw-cell')) {
             if (!gameStarted) {
-                startGame();
+                startGame(e);
             }
             openCell(t, false);
             console.log(t.x, t.y);
         }
 
     }
-
-    mw.addEventListener('click', cellInteract);
+    let arrowNavigate = (e, m_to_x, m_to_y) => {
+        const t = e.target;
+        x = t.x
+        y = t.y
+        bombCell[y + m_to_y][x + m_to_x].focus()
+    }
+    let placeMark = e => {
+        const t = e.target
+        x = t.x
+        y = t.y
+        bombCell[y][x].classList.add("mw-cell--mark")
+    }
+    mw.addEventListener('mousedown', e => {
+        t = e.target
+        if (t.classList.contains('mw-cell')) {
+            if (e.button === 2) {
+                console.log("2 but")
+                placeMark(e)
+            } else {
+                cellInteract(e)
+            }
+        }
+    });
     mw.addEventListener('keydown', e => {
         const t = e.target
         switch (e.key) {
             case "Enter":
             case "Space":
-                console.log("Okett")
-                cellInteract(e)
+                if (e.ctrlKey && !t.classList.contains("mw-cell--open")) {
+                    placeMark(e)
+
+                } else {
+                    console.log("Okett")
+                    cellInteract(e)
+                }
+                break;
+
+            case "Down":
+            case "ArrowDown":
+                if (t.y < height - 1) {
+                    arrowNavigate(e, 0, 1)
+                }
+                break;
+            case "Up":
+            case "ArrowUp":
+                if (t.y > 0) {
+                    arrowNavigate(e, 0, -1)
+                }
+                break;
+            case "Left":
+            case "ArrowLeft":
+                if (t.x > 0) {
+                    arrowNavigate(e, -1, 0)
+                }
+                break;
+            case "Right":
+            case "ArrowRight":
+                if (t.x < width - 1) arrowNavigate(e, 1, 0)
                 break;
         }
 
     });
 
-    let startGame = () => {
+    let startGame = (e) => {
         gameStarted = true;
-        createBombs();
+        t = e.target
+        createBombs(t.x, t.y);
         console.log(bombMap)
     };
 });
